@@ -16,12 +16,12 @@ const MainNav = (props: Props) => {
     const list = [
       { id: 1, name: "Home", link: "/" },
       { id: 2, name: "About", link: "/about" },
-      { id: 3, name: "Fetch", link: "/fetch" },
+      { id: 3, name: "Playground", link: "/playground" },
     ];
     setMainMenu(list);
   }, []);
   return (
-    <ul>
+    <ul className="lg:flex items-center hidden">
       {mainMenu.map((v: any) => {
         return <MenuList key={v.id} menuList={{ name: v.name, url: v.link }} />;
       })}
